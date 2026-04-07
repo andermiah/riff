@@ -8,14 +8,20 @@ Open a brainstorming session with Claude from your terminal. Bring a half-formed
 
 ## Install
 
+**Fish:**
 ```sh
-git clone https://github.com/andermiah/riff.git
-cd riff
-chmod +x install.sh
-./install.sh
+curl -sL https://raw.githubusercontent.com/andermiah/riff/main/riff.fish -o ~/.config/fish/functions/riff.fish
 ```
 
-Supports **fish**, **bash**, and **zsh**.
+**Bash:**
+```sh
+curl -sL https://raw.githubusercontent.com/andermiah/riff/main/riff.sh >> ~/.bashrc && source ~/.bashrc
+```
+
+**Zsh:**
+```sh
+curl -sL https://raw.githubusercontent.com/andermiah/riff/main/riff.sh >> ~/.zshrc && source ~/.zshrc
+```
 
 ## Usage
 
@@ -23,12 +29,10 @@ Supports **fish**, **bash**, and **zsh**.
 riff
 ```
 
-That's it. Claude will greet you and invite you to share what's on your mind.
+Claude will greet you and invite you to share what's on your mind.
 
-Previous sessions can be resumed with:
+To resume a previous session:
 
 ```sh
 claude --resume
 ```
-
-and selecting a session named `riff`.
